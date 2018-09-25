@@ -10,11 +10,8 @@ CloudRenderer::CloudRenderer(GLFWwindow* window, int skyDomeSize) : m_window(win
 
     m_screenFillingQuad = new Quad;
     m_cloudShaderProgram = new ShaderProgram("/clouds.vert", "/clouds.frag");
-    m_cloudShaderProgramID = m_cloudShaderProgram->getShaderProgramHandle();
     m_postProcessShaderProgram = new ShaderProgram("/postProcess.vert", "/postProcess.frag");
-    m_postProcessShaderProgramID = m_postProcessShaderProgram->getShaderProgramHandle();
     m_screenFillingShaderProgram = new ShaderProgram("/fullscreen.vert", "/fullscreen.frag");
-    m_screenFillingShaderProgramID = m_screenFillingShaderProgram->getShaderProgramHandle();
     checkGLError("Shader initialization");
 
     m_skyDome = new Sphere(float(m_skyDomeSize));
