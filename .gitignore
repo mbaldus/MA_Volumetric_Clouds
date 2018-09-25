@@ -1,0 +1,7 @@
+#ingnoring build-directories
+.idea/
+/dependencies*
+/build*
+/cmake-build*
+/release_build*
+/.vs
